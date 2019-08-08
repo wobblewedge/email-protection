@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <title>Spring Framework Guru</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <link href="http://cdn.jsdelivr.net/webjars/bootstrap/4.1.0/css/bootstrap.min.css"
+          th:href="@{/webjars/bootstrap/4.1.0/css/bootstrap.min.css}"
+          rel="stylesheet" media="screen" />
+  <link href="../static/css/home.css"
+          th:href="@{css/home.css}" rel="stylesheet" media="screen"/>
+</head>
+<body>
+<div class="row">
+  <div class="col-md-2 col-sm-0">
+    <div class="profile">
+      <img src="https://pbs.twimg.com/profile_images/786583866224017408/lcV52DFE.jpg" class="profile">
+    </div>
+    <nav class="navbar navbar-expand navbar-light">
+    <section class="side-navbar">
+      <ul>
+        <li><span class="glyphicon glyphicon-eye-open"></span>Overview</li>
+        <li><span class="glyphicon glyphicon-exclamation-sign"></span>Notification</li>
+        <li><span class="glyphicon glyphicon glyphicon-list-alt"></span>History</li>
+        <li><span class="glyphicon glyphicon-cog"></span>Settings</li>
+      </ul>
+    </section>
+       </nav>
+   
+  </div>
+  <div class="col-md-10 col-sm-12">
+    <section class="row data">
+      <table class="table table-striped">
+        <tr>
+          <td>Name</td>
+          <td>Customer ID</td>
+          <td>Order Number</td>
+          <td>Action</td>
+        </tr>
+        <tr>
+          <td>Jason Kuan</td>
+          <td>04372678</td>
+          <td>10,000</td>
+          <td>
+              <span class="glyphicon glyphicon-trash icon-box"></span>
+               <span class="glyphicon glyphicon-envelope icon-box"></span>
+          </td>
+        </tr>
+        <tr>
+          <td>Annie</td>
+          <td>03182194</td>
+          <td>5,000</td>
+           <td>
+              <span class="glyphicon glyphicon-trash icon-box"></span>
+               <span class="glyphicon glyphicon-envelope icon-box"></span>
+          </td>
+        </tr>
+        <tr>
+          <td>Peter</td>
+          <td>08782194</td>
+          <td>13,000</td>
+          <td>
+              <span class="glyphicon glyphicon-trash icon-box"></span>
+              <span class="glyphicon glyphicon-envelope icon-box"></span>
+          </td>
+        </tr>
+        <tr>
+          <td>Stephenie Chang</td>
+          <td>02124194</td>
+          <td>12,000</td>
+          <td>
+              <span class="glyphicon glyphicon-trash icon-box"></span>
+               <span class="glyphicon glyphicon-envelope icon-box"></span>
+          </td>
+        </tr>       
+      </table>
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
+          Monthly Target Progress 80%
+        </div>
+      </div>
+    </section>
+    <section class="row dashboard">
+      <div class="card col-sm-4">
+        <div class="data-1">
+          <h2>Customer Statisfaction</h2>
+          <span class="glyphicon glyphicon-hdd"></span>
+          32%
+        </div>       
+      </div>
+      <div class="card col-sm-4">
+        <div class="data-2">
+          <h2>Message</h2>
+          <span class="glyphicon glyphicon-envelope"></span>
+          15
+        </div>       
+      </div>
+      <div class="card col-sm-4">
+        <div class="data-3">
+          <h2>Data</h2>
+          <span class="glyphicon glyphicon-signal"></span>
+          10,000
+        </div>       
+      </div>
+    </section>
+  </div>
+</div>
+  
+</body>
+</html>
