@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
+@RequestMapping("/mail")
 public class EmailController {
 		
 	@Autowired
@@ -54,7 +55,7 @@ public class EmailController {
             String key = iterator.next();
             model.addAttribute(key, props.get(key));
         }
-
+        
         model.addAttribute("mailObject", new EmailObject());
         return "mail/send";
     }
@@ -64,7 +65,7 @@ public class EmailController {
                              @ModelAttribute("mailObject") @Valid EmailObject mailObject,
                              Errors errors) {
         if (errors.hasErrors()) {
-            return "mail/send";
+            return "send";
         }
         emailService.sendSimpleMessage(mailObject.getTo(),
                 mailObject.getSubject(), mailObject.getText());
